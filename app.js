@@ -1,9 +1,12 @@
 const createError = require("http-errors")
 const express = require("express")
 const logger = require("morgan")
+const helmet = require("helmet")
+
 const mailer = require("./apps/mailer/mailer.routes")
 const app = express()
 
+app.use(helmet())
 app.use(logger("dev"))
 app.use(express.json())
 app.use("/mailer", mailer)
