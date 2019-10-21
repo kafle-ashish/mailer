@@ -10,11 +10,13 @@ const send = async (req, res) => {
                 text: req.body.text
             },
             (err, data) => {
-                if (err)
+                if (err) {
+                    console.log(err)
                     return res.status(400).json({
                         error: "Error ocurred!",
                         err: err
                     })
+                }
                 return res.status(200).json({
                     message: "Mail sent!",
                     result: data
@@ -22,6 +24,7 @@ const send = async (req, res) => {
             }
         )
     } catch (e) {
+        console.log(e)
         return res.status(400).json({
             error: "Error ocurred!",
             err: e
