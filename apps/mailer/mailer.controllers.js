@@ -11,7 +11,6 @@ const send = async (req, res) => {
             },
             (err, data) => {
                 if (err) {
-                    console.log(err)
                     return res.status(400).json({
                         error: "Error ocurred!",
                         err: err
@@ -24,7 +23,6 @@ const send = async (req, res) => {
             }
         )
     } catch (e) {
-        console.log(e)
         return res.status(400).json({
             error: "Error ocurred!",
             err: e
