@@ -13,6 +13,7 @@ app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
 app.use('/mailer', mailer);
+app.use('/', (req, res) => res.status(200).json({ status: 'Online!' }));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
