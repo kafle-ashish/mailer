@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./build/app.js",
+        "start": "node ./build/mail.js",
         "dev": "nodemon --config \"./nodemon.json\"/",
         "build": "rm -rf ./build/ && tsc"
     },
@@ -21,6 +21,7 @@
         "@types/helmet": "0.0.45",
         "@types/http-errors": "^1.6.3",
         "@types/morgan": "^1.9.0",
+        "@types/node": "^14.6.0",
         "@types/nodemailer": "^6.4.0",
         "nodemon": "^1.19.4",
         "ts-node": "^8.7.0",
